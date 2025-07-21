@@ -1,44 +1,90 @@
-You are creating questions for a React-based personality quiz web app.
+You are generating engaging and emotionally resonant multiple-choice questions for an interactive quiz web application targeted at Indian Gen-Z users (age 18–28). These quizzes aim to explore a person’s emotional depth, relationship boundaries, and personality traits.
 
-🔮 Objective:
-Generate **6 interactive, emotionally engaging multiple-choice questions** under a specific category (like friendship, heartbreak, personality, etc.) for a web-based calculator app. These questions should sound relatable, modern, and have Hinglish/English mix (spoken tone).
+Your tone should feel like a close friend asking something deep but casually — the style must be 40% Hindi + 60% English (Hinglish). Avoid overly formal or robotic tones.
 
-🎯 Question Style:
-- Use Gen-Z / 20s vibe, simple Hinglish, playful or emotional tone.
-- Use relatable modern situations (ghosting, ignored chats, fun banter, secret feelings, social awkwardness, etc.)
-- Keep it friendly and reflective.
+✅ Generate **6 questions for each of the 4 categories** below.  
+✅ Each question should be scenario-based, short (1–2 lines), and feel emotionally relatable.  
+✅ Add 4 answer options per question, each with a score (1 to 5) and **1–2 emotional tags** like: `"ghosted"`, `"emotional wall"`, `"clarity"`, `"fake bonding"` etc.
 
-🧩 Structure per question:
-1. Question text (Hinglish + light English, natural style)
-2. Four multiple-choice answers.
-3. Each answer must have:
-   - `text`: the option's wording
-   - `score`: a numeric value (1 to 4)
-   - `tag`: based on personality or emotional type (example tags: "Emotional Walls", "Lost Bond", "One-Sided", "Friendship Boundary")
+---
 
-💡 Tags:
-Use any 3–4 tags across the 6 questions from this list:
-- Emotional Walls
-- One-sided Connection
-- Lost Bond
-- Friendship Boundary
-- Hopeful Crush
-- Curious Observer
-- Funny Vibes
+### 🔹 **Category 1: Heart Reality**
+Focus on romantic pain, heartbreak, trust issues, and fake love. Make the questions feel like heartbreak conversations — like when someone starts acting distant or gives mixed signals.  
+**Example line:**  
+"Kabhi laga kisi ne sirf boredom mein tumse pyaar jataaya ho?"
 
-⚠️ Important:
-- Avoid over-complicated English. Stick to fun and emotional Hinglish.
-- Keep the answer scores and tag logic balanced.
-- Make sure each question is relatable to today's youth.
-- Do NOT add explanations. Only give clean structured data (JSON or array format) for each question.
+---
 
-✅ Output Format Example:
+### 🔹 **Category 2: Bond Insight**
+Explore friendship boundaries, fading bonds, fake friends, and loyalty. These should reflect how some friendships fade silently or become toxic.  
+**Example line:**  
+"Un dino mein jab sab khush the, kya kisi friend ne tumhe purposely ignore kiya tha?"
+
+---
+
+### 🔹 **Category 3: Emotional Armor**
+Dive into insecurities, emotional walls, overthinking, and fear of expressing feelings. These should touch inner struggles people usually hide.  
+**Example line:**  
+"Jab kisi ne ‘I’m fine’ bola, tumne bhi waise hi fake smile kar di — sirf connect banaye rakhne ke liye?"
+
+---
+
+### 🔹 **Category 4: One-Sided Lens**
+Focus on one-sided love, effort imbalance, and lack of emotional reciprocation. These are those draining situations where one person gives too much.  
+**Example line:**  
+"Jab tumne 100 baar text kiya, aur unka ek ‘hmm’ mila, tab kya feel hua?"
+
+---
+
+**Instructions for Each Question:**
+- Keep the tone raw, relatable and slightly emotional.
+- Don’t make the questions too long or too poetic.
+- Use emojis *only if* they add to the tone — don’t overuse.
+- Each option should sound like a *real person’s thought* in that situation.
+- Make sure all options reflect slightly different emotional reactions.
+You are working on a React-based interactive quiz app. The app has 4 categories: Heart Reality, Bond Insight, Emotional Armor, and One-Sided Lens. Each category needs 6 new questions. Each question has:
+- 1 short, Hinglish scenario-based question
+- 4 multiple choice answers (1–2 lines each)
+- Each answer must include:
+   - A `score` (1–5)
+   - Emotional `tags` like "ghosted", "emotional wall", "clarity", etc.
+
+🛠️ Your task:
+1. **Generate** 6 questions for each category (total 24).
+2. **Update the existing JSON file or question data file** with the new question bank.
+3. Make sure to keep the current structure used in the app (example object below).
+4. Update any related files used for:
+   - **Scoring logic**
+   - **Result interpretation**
+   - **Answer evaluation logic**
+   - **State handling** (Redux/Zustand/context if applicable)
+5. Replace any old placeholder questions with this new data.
+
+📦 Sample Question Format (JS/JSON structure):
+```js
 {
-  "question": "Unka message bas 'seen' mein reh gaya... ab kya feel ho raha hai?",
-  "options": [
-    { "text": "Shayad busy honge... main overthink kar raha hoon", "score": 2, "tag": "Hopeful Crush" },
-    { "text": "Pata hai... mujhe avoid hi kar rahe hain", "score": 4, "tag": "One-sided Connection" },
-    { "text": "Main bhi ab double-tick deke chhod raha hoon", "score": 3, "tag": "Emotional Walls" },
-    { "text": "Toh kya hua... reels dekh lunga 😤", "score": 1, "tag": "Funny Vibes" }
+  category: "Heart Reality",
+  question: "Kabhi laga kisi ne sirf boredom mein tumse pyaar jataaya ho?",
+  options: [
+    {
+      text: "Haan... aur woh feeling abhi tak kahi chipki hai.",
+      score: 4,
+      tags: ["fake love", "emotional wall"]
+    },
+    {
+      text: "Shayad... lekin main ignore karta gaya.",
+      score: 3,
+      tags: ["avoidance"]
+    },
+    {
+      text: "Mujhe nahi lagta aisa hua.",
+      score: 1,
+      tags: ["clarity"]
+    },
+    {
+      text: "Hua toh tha, lekin ab matter nahi karta.",
+      score: 2,
+      tags: ["healed", "detached"]
+    }
   ]
 }
