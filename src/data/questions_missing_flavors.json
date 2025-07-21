@@ -1,0 +1,377 @@
+{
+  "heartReality": [
+    {
+      "id": "heart_reality_1",
+      "question": "Someone texts \"I miss you 😔\" but {name} just stares at the screen, feeling hollow inside...",
+      "englishHint": "What do you think when someone misses you but you feel nothing?",
+      "hinglishHint": "Koi kehta hai 'miss you' par andar kuch feel hi nahi hota... Tere dil mein woh khaali-pan kyun hai? 💔😶",
+      "options": [
+        { "id": "a", "text": "\"I should fake a sweet reply, right?\" 🎭", "points": 1 },
+        { "id": "b", "text": "\"Do I even remember how to miss someone?\" 🤔", "points": 2 },
+        { "id": "c", "text": "\"Cute... but I need my space, yaar.\" 🧊", "points": 3 },
+        { "id": "d", "text": "\"Want to reply but fingers feel heavy AF.\" 📱", "points": 2 }
+      ],
+      "scoreTag": "Emotional Walls"
+    },
+    {
+      "id": "heart_reality_2",
+      "question": "3AM thoughts: What's {name}'s real definition of love now?",
+      "englishHint": "How has your view of love evolved through your experiences?",
+      "hinglishHint": "Aadhi raat ko jab neend nahi aati, tab pyaar ka matlab kya lagta hai tujhe? Pehle jaisa ya bilkul badal gaya? 💭❤️‍🩹",
+      "options": [
+        { "id": "a", "text": "Silent respect that feels like home. 🏡", "points": 4 },
+        { "id": "b", "text": "Chaotic passion that consumes everything! 🔥", "points": 3 },
+        { "id": "c", "text": "A fantasy that novels and films lied about. 🥀", "points": 1 },
+        { "id": "d", "text": "Peaceful understanding without drama. 🧘", "points": 2 }
+      ],
+      "scoreTag": "Love Perspective"
+    },
+    {
+      "id": "heart_reality_3",
+      "question": "{name} checks their sent messages - all blue ticks, no replies. Again, you're left hanging...",
+      "englishHint": "How do you handle one-sided connections?",
+      "hinglishHint": "Hamesha tu hi message karta hai... Wo sirf blue ticks deta hai. Dil pe kya beetti hai teri? 📲💔",
+      "options": [
+        { "id": "a", "text": "Abruptly stop - they need to feel your absence. 🛑", "points": 3 },
+        { "id": "b", "text": "Triple text for closure - neend nahi aayegi warna. 📲", "points": 1 },
+        { "id": "c", "text": "Ghost them silently - dikh ke bhi na dikhunga. 👻", "points": 2 },
+        { "id": "d", "text": "Send a relatable meme and emotionally detach. 🎮", "points": 4 }
+      ],
+      "scoreTag": "One-sided Connection"
+    },
+    {
+      "id": "heart_reality_4",
+      "question": "{name} gets hot messages at night, but daytime replies are cold AF. The confusion is killing you...",
+      "englishHint": "How do you handle people who show inconsistent interest?",
+      "hinglishHint": "Raat ko 'baby I miss you' aur din mein cold replies. Yeh mixed signals se dimaag ka bharta ban raha hai, ab kya karein? 🧊🔥",
+      "options": [
+        { "id": "a", "text": "Overthink every word looking for hidden clues 🔍", "points": 1 },
+        { "id": "b", "text": "Confront directly - \"Seedhe batao, kya chal raha hai?\" 📣", "points": 3 },
+        { "id": "c", "text": "Match their energy - hot-cold khel lenge hum bhi 🧊🔥", "points": 2 },
+        { "id": "d", "text": "Nikal lo - life's too short for ye drama 👋", "points": 4 }
+      ],
+      "scoreTag": "Mixed Signals Response"
+    },
+    {
+      "id": "heart_reality_5",
+      "question": "After 2 years together, {name} realizes the butterflies are gone. Now it's just... comfortable silence.",
+      "englishHint": "What does it mean when relationship excitement fades?",
+      "hinglishHint": "Woh pehle wali feeling gayab ho gayi hai. Dil mein woh butterflies nahin rahe. Kya pyaar badal gaya ya khatam ho gaya? 🦋❤️‍🩹",
+      "options": [
+        { "id": "a", "text": "This is real love - not just excitement ka nasha 🧠", "points": 4 },
+        { "id": "b", "text": "Time for surprise dates - woh purana spark wapas laana hai 🔥", "points": 3 },
+        { "id": "c", "text": "Maybe it's time to let go - ye rishta thak gaya hai 🚶", "points": 1 },
+        { "id": "d", "text": "Do I actually know what love feels like? 🤔", "points": 2 }
+      ],
+      "scoreTag": "Relationship Evolution"
+    },
+    {
+      "id": "heart_reality_6",
+      "question": "{name}'s phone lights up with an ex's name after months. Your heart feels...",
+      "englishHint": "What emotions surface when an ex suddenly returns?",
+      "hinglishHint": "Ex ka message dekh ke dil mein kaisa toofan aaya? Ya kuch bhi feel nahi hua? Woh purani yaadein abhi bhi dil mein zinda hain? 👻💔",
+      "options": [
+        { "id": "a", "text": "Dead inside - jaise koi anjaan ka message ho ⏰", "points": 1 },
+        { "id": "b", "text": "Nostalgia and warning bells dono ek saath 🦋⚠️", "points": 3 },
+        { "id": "c", "text": "Mild curiosity - jaise purani film dekh rahe ho 🎬", "points": 2 },
+        { "id": "d", "text": "Peaceful - we've both grown, no regrets 🔍", "points": 4 }
+      ],
+      "scoreTag": "Ex Reconnection"
+    },
+    {
+      "id": "heart_reality_7",
+      "question": "{name} catches feelings but is terrified of another heartbreak. You're frozen between desire and fear...",
+      "englishHint": "How do you handle falling for someone when you fear getting hurt?",
+      "hinglishHint": "Dil chahta hai lekin darr bhi lagta hai. Ek aur heartbreak se toote dil ko sambhalna mushkil hoga. Kya karein? 💓😨",
+      "options": [
+        { "id": "a", "text": "Keep a safe distance - protection mode on 🛡️", "points": 2 },
+        { "id": "b", "text": "Dive in fully - zindagi hai, risk lene padenge 🏊", "points": 4 },
+        { "id": "c", "text": "Give subtle hints but keep escape route ready 🚪", "points": 3 },
+        { "id": "d", "text": "Ignore feelings until they hopefully disappear 🙈", "points": 1 }
+      ],
+      "scoreTag": "Vulnerability Comfort"
+    }
+  ],
+  
+  "bondInsight": [
+    {
+      "id": "bond_insight_1",
+      "question": "{name}'s so-called \"best friend\" messages only when they need help. After months of silence, they ask for another favor...",
+      "englishHint": "How do you handle friends who only appear when they need something?",
+      "hinglishHint": "Woh 'dost' jo sirf zaroorat padne par hi yaad karte hain. Baar-baar aise use hone par dil mein kya feelings aati hain? 💉🤨",
+      "options": [
+        { "id": "a", "text": "Help them, par dil pe chot lagti hai. 💉", "points": 2 },
+        { "id": "b", "text": "Read karo, ghuma ke jawab do. Let them chase. 🙃", "points": 3 },
+        { "id": "c", "text": "\"Bro main tera backup plan nahi hoon.\" Clear kar do. 🔋", "points": 4 },
+        { "id": "d", "text": "Dheere dheere distance banao, drama nahi chahiye. 🌫️", "points": 1 }
+      ],
+      "scoreTag": "Friendship Boundaries"
+    },
+    {
+      "id": "bond_insight_2",
+      "question": "{name} sees Instagram stories of all friends on a trip. You weren't even told about it...",
+      "englishHint": "How do you process feeling excluded by your friend group?",
+      "hinglishHint": "Saare dost ghumne gaye, tujhe bataya tak nahi. Stories dekhkar pata chala. Andar se kaisa feel ho raha hai? 📱😕",
+      "options": [
+        { "id": "a", "text": "Joke it off on group chat - \"maza aaya hoga 😂\"", "points": 2 },
+        { "id": "b", "text": "Scroll through feeling empty inside. 😶", "points": 1 },
+        { "id": "c", "text": "Muted stories - andar hi andar jalan hoti hai. 🔥", "points": 3 },
+        { "id": "d", "text": "Plan your own adventure - main khud ki vibe hu. 🌟", "points": 4 }
+      ],
+      "scoreTag": "Exclusion Response"
+    },
+    {
+      "id": "bond_insight_3",
+      "question": "Looking at old photos, {name} realizes it's been months since you genuinely connected with any friend...",
+      "englishHint": "How does friendship isolation affect you emotionally?",
+      "hinglishHint": "Kitne mahine ho gaye kisi dost ke saath dil kholkar hasne ko? Yaadein toh hain, par aaj tera koi sachcha dost hai? 🫂🥺",
+      "options": [
+        { "id": "a", "text": "Maybe main hi badal gaya/gayi hoon... 🦋", "points": 3 },
+        { "id": "b", "text": "I just need one real yaar. Quantity nahi, quality. 🫂", "points": 4 },
+        { "id": "c", "text": "Who has time for friendships? Life busy hai. 📅", "points": 1 },
+        { "id": "d", "text": "Depressing realization. Kahan reh gaye sab? 😶‍🌫️", "points": 2 }
+      ],
+      "scoreTag": "Friendship Longing"
+    },
+    {
+      "id": "bond_insight_4",
+      "question": "{name} stares at the group chat flooding with memes but zero meaningful conversation for weeks...",
+      "englishHint": "How do you deal with superficial friendship interactions?",
+      "hinglishHint": "Group chat mein sirf memes aur forwards hai. Koi real baat nahi hoti. Kya yeh dosti hai ya timepass? 📱🎭",
+      "options": [
+        { "id": "a", "text": "Keep sharing memes - deep baatein overrated hain 🎭", "points": 2 },
+        { "id": "b", "text": "\"Guys, life mein kya chal raha hai?\" Throw a real question 🎣", "points": 4 },
+        { "id": "c", "text": "Silent observer - padhke exit kar lena 👀", "points": 1 },
+        { "id": "d", "text": "DM one close friend separately - selective depth 💬", "points": 3 }
+      ],
+      "scoreTag": "Connection Depth"
+    },
+    {
+      "id": "bond_insight_5",
+      "question": "After 5 years, {name} bumps into a childhood friend at a café. The moment feels...",
+      "englishHint": "What's your emotional experience with unexpected reconnections?",
+      "hinglishHint": "Bachpan ka dost achanak mil gaya cafe mein. Purani yaadein, naye chehre. Kaisa laga unse dobara milkar? 👥🕰️",
+      "options": [
+        { "id": "a", "text": "Awkward - strangers with memories ban gaye hain 👥", "points": 1 },
+        { "id": "b", "text": "Nostalgic but hollow - woh waqt wapas nahi aayega 📸", "points": 2 },
+        { "id": "c", "text": "Instantly comfortable - kuch rishtey kabhi nahi tootte 🔄", "points": 4 },
+        { "id": "d", "text": "Fascinating - life journeys compare karne mein maza aaya 📺", "points": 3 }
+      ],
+      "scoreTag": "Reconnection Depth"
+    },
+    {
+      "id": "bond_insight_6",
+      "question": "{name}'s phone keeps buzzing with messages but your soul feels completely drained...",
+      "englishHint": "How do you balance social obligations with emotional exhaustion?",
+      "hinglishHint": "Phone notifications se dimaag phat raha hai, par reply karne ki energy nahi bachi. Social battery zero hai. Ab kya? 🔋😩",
+      "options": [
+        { "id": "a", "text": "One-word replies - obligatory response dena padega 🔤", "points": 2 },
+        { "id": "b", "text": "\"Busy hoon\" message - white lie for peace 🥱", "points": 3 },
+        { "id": "c", "text": "Do Not Disturb mode - mental peace first 🔋", "points": 4 },
+        { "id": "d", "text": "Force yourself to chat - FOMO se darr lagta hai 😬", "points": 1 }
+      ],
+      "scoreTag": "Social Energy Management"
+    },
+    {
+      "id": "bond_insight_7",
+      "question": "Your friend betrayed {name}'s trust, sharing your personal secret with others. Your heart feels...",
+      "englishHint": "How do you process betrayal from someone you trusted?",
+      "hinglishHint": "Jis dost pe bharosa kiya, usne teri personal baat sabko bata di. Vishwas toot gaya. Dil mein kya chal raha hai? 💔🤐",
+      "options": [
+        { "id": "a", "text": "Confront directly - \"How could you do this?\" 😠", "points": 3 },
+        { "id": "b", "text": "Ghost completely - trust breakers deserve silence 👻", "points": 2 },
+        { "id": "c", "text": "Give second chance - har insaan galti karta hai 🕊️", "points": 4 },
+        { "id": "d", "text": "Pretend it's fine but never share again 🎭", "points": 1 }
+      ],
+      "scoreTag": "Trust Resilience"
+    }
+  ],
+
+  "workPsyche": [
+    {
+      "id": "work_psyche_1",
+      "question": "While everyone's hustling 24/7, {name} watches from the sidelines, thinking...",
+      "englishHint": "What's your authentic stance on career advancement pressure?",
+      "hinglishHint": "Sab log bhag-daud mein lage hain, success ke peeche. Tu kya soch raha hai apne career ko lekar? Saccha jawab de. 🏃‍♂️💭",
+      "options": [
+        { "id": "a", "text": "Slow growth is also growth - meri apni speed hai. 🌱", "points": 3 },
+        { "id": "b", "text": "YOLO - success se zyada peace of mind important hai. 😎", "points": 2 },
+        { "id": "c", "text": "Plans toh bohot hain, execution mein problem hai. 😅", "points": 1 },
+        { "id": "d", "text": "Building my empire brick by brick - no shortcuts. 🧱", "points": 4 }
+      ],
+      "scoreTag": "Career Philosophy"
+    },
+    {
+      "id": "work_psyche_2",
+      "question": "The dreaded interview question hits {name}: \"Where do you see yourself in 5 years?\" Your mind goes...",
+      "englishHint": "What's your honest vision of your future compared to what you tell others?",
+      "hinglishHint": "\"5 saal baad kahan dekhte ho khud ko?\" - Interviewer ka yeh sawal sunke dimag mein kya REAL thoughts aate hain? 🤔⏱️",
+      "options": [
+        { "id": "a", "text": "\"Hopefully on a better chair with better snacks.\" 🍪", "points": 2 },
+        { "id": "b", "text": "\"WFH in pajamas, making more with less stress.\" 🧦", "points": 3 },
+        { "id": "c", "text": "\"Honestly? Just surviving capitalism, bro.\" 💀", "points": 1 },
+        { "id": "d", "text": "\"Building my own venture - independent hona hai.\" 💼", "points": 4 }
+      ],
+      "scoreTag": "Future Authenticity"
+    },
+    {
+      "id": "work_psyche_3",
+      "question": "{name} has dreams of success but hasn't opened the laptop in days. The guilt is building...",
+      "englishHint": "How do you reconcile big ambitions with procrastination reality?",
+      "hinglishHint": "Bade sapne hain par kaam start karne ka mann hi nahi karta. Iss guilt aur procrastination se kaise deal karta hai? 💤🚀",
+      "options": [
+        { "id": "a", "text": "\"Creative break hai - dimaag recharge ho raha hai.\" 💤", "points": 3 },
+        { "id": "b", "text": "Scroll, feel guilty, repeat - toxic cycle hai. 📱", "points": 1 },
+        { "id": "c", "text": "\"Kal pakka start karunga\" - classic postponement. 🌴", "points": 2 },
+        { "id": "d", "text": "\"Planning phase\" - execution se pehle sochna zaroori hai. 🧠", "points": 4 }
+      ],
+      "scoreTag": "Ambition-Action Gap"
+    },
+    {
+      "id": "work_psyche_4",
+      "question": "Colleague brags: \"Haven't slept properly in weeks, grinding 24/7!\" {name} thinks...",
+      "englishHint": "What's your authentic reaction to hustle culture glorification?",
+      "hinglishHint": "Log apni busy life ki shekhi bagharte hain. \"No sleep, only hustle!\" sunke tere mann mein kya REAL thoughts aate hain? 😴💼",
+      "options": [
+        { "id": "a", "text": "\"Weird flex but ok\" - work-life balance is smarter 🧘", "points": 4 },
+        { "id": "b", "text": "\"Kya main lazy hoon?\" *guilt and anxiety start* 😰", "points": 2 },
+        { "id": "c", "text": "\"That's inspiring!\" - grind culture ka fan hoon 💯", "points": 3 },
+        { "id": "d", "text": "\"Sounds unhealthy AF\" - not impressed at all 🥱", "points": 1 }
+      ],
+      "scoreTag": "Hustle Culture View"
+    },
+    {
+      "id": "work_psyche_5",
+      "question": "{name} opens the rejection email from dream company. Your immediate reaction is...",
+      "englishHint": "How do career disappointments affect your self-perception?",
+      "hinglishHint": "Dream job se rejection email aaya hai. Pehla reaction kya hai? Dil mein sachchi feeling kya hai iss waqt? 📧💔",
+      "options": [
+        { "id": "a", "text": "\"Their loss honestly\" - confidence remains unshaken 💪", "points": 4 },
+        { "id": "b", "text": "Analyze feedback obsessively - next time perfect hona hai 🔍", "points": 3 },
+        { "id": "c", "text": "Feel like trash but apply to 10 more companies anyway 📑", "points": 2 },
+        { "id": "d", "text": "\"Is this even my right path?\" - existential doubt 🤷", "points": 1 }
+      ],
+      "scoreTag": "Career Resilience"
+    },
+    {
+      "id": "work_psyche_6",
+      "question": "While teammates compete fiercely, {name} maintains a relaxed pace. This makes you feel...",
+      "englishHint": "How does resisting workplace competition culture affect your identity?",
+      "hinglishHint": "Office mein sab competition mein lage hain, par tu apni pace se kaam kar raha hai. Isse tere mann mein kaisa feel hota hai? 🏢🧘",
+      "options": [
+        { "id": "a", "text": "Centered - meri journey, meri marzi 🧘", "points": 4 },
+        { "id": "b", "text": "Strategic - jab sab burnout honge, main fresh rahunga 🧠", "points": 3 },
+        { "id": "c", "text": "Mixed feelings - kabhi confident, kabhi insecure 🌊", "points": 2 },
+        { "id": "d", "text": "FOMO - kya main peeche reh jaunga? 😬", "points": 1 }
+      ],
+      "scoreTag": "Competitive Spirit"
+    },
+    {
+      "id": "work_psyche_7",
+      "question": "{name} secretly dreams of quitting the 9-5 grind, but financial fears keep you trapped...",
+      "englishHint": "How do you handle the tension between security and freedom in career choices?",
+      "hinglishHint": "9-5 job se bore ho gaya hai, kuch aur karna hai, par paise ki tension hai. Yeh financial fear aur freedom ki chahat ke beech kya karta hai? 💰🦅",
+      "options": [
+        { "id": "a", "text": "Side-hustle by night - risk kam, potential zyada 🌙", "points": 3 },
+        { "id": "b", "text": "Save aggressively for the escape - freedom fund 💸", "points": 4 },
+        { "id": "c", "text": "Just daydream but take no action - safe zone 💭", "points": 1 },
+        { "id": "d", "text": "Upskill while employed - better options dhund raha hoon 📚", "points": 2 }
+      ],
+      "scoreTag": "Security-Freedom Balance"
+    }
+  ],
+
+  "innerEcho": [
+    {
+      "id": "inner_echo_1",
+      "question": "People call {name} \"the calm one.\" But if they could see inside your mind...",
+      "englishHint": "How different is your internal world from what others perceive?",
+      "hinglishHint": "Bahar se shaant dikhte ho, par andar ka toofan koi nahi jaanta. Dimaag mein kya chal raha hai actually? 😌→😱",
+      "options": [
+        { "id": "a", "text": "Andar se cheekh rahe hain, bahar se smile kar rahe hain. 😱", "points": 2 },
+        { "id": "b", "text": "10 thoughts per second - dimaag racing car hai. 🏃‍♂️", "points": 3 },
+        { "id": "c", "text": "Silently analyzing everything and everyone. 🦅", "points": 4 },
+        { "id": "d", "text": "Actually calm inside too - main sach mein zen hoon. 😌", "points": 1 }
+      ],
+      "scoreTag": "Inner-Outer Alignment"
+    },
+    {
+      "id": "inner_echo_2",
+      "question": "{name} writes deep poetic messages but speaks in memes and one-liners in person...",
+      "englishHint": "Why is there such contrast between your written and verbal expression?",
+      "hinglishHint": "Messages mein Ghalib, real life mein memer. Yeh do personalities ke beech kya connection hai? Text aur talk mein itna fark kyun? 📝🗣️",
+      "options": [
+        { "id": "a", "text": "Different contexts, different versions of me. 🔄", "points": 3 },
+        { "id": "b", "text": "Text mein brave, real life mein shy. 🎭", "points": 2 },
+        { "id": "c", "text": "It's all a performance - authenticity kahan hai? 🎬", "points": 1 },
+        { "id": "d", "text": "That's just my unique wiring - complex personality. 🤷", "points": 4 }
+      ],
+      "scoreTag": "Expression Duality"
+    },
+    {
+      "id": "inner_echo_3",
+      "question": "During a quiet moment alone, {name} realizes your true default emotional state is...",
+      "englishHint": "What's your baseline emotional state when nobody's watching?",
+      "hinglishHint": "Jab koi nahi dekh raha, tab tera natural mood kya hota hai? Bina filter ke, tera asli mood kya hai akele mein? 🧘💭",
+      "options": [
+        { "id": "a", "text": "Productive but constantly exhausted. 💻", "points": 3 },
+        { "id": "b", "text": "Creatively restless with deep thoughts. 🎮", "points": 4 },
+        { "id": "c", "text": "Outwardly peaceful, inwardly overthinking everything. 🧘", "points": 2 },
+        { "id": "d", "text": "Complete confusion wrapped in false confidence. 😎", "points": 1 }
+      ],
+      "scoreTag": "Authentic State"
+    },
+    {
+      "id": "inner_echo_4",
+      "question": "{name} walks into a crowded party where you barely know anyone. Your instinct screams...",
+      "englishHint": "What does your authentic self want in uncomfortable social settings?",
+      "hinglishHint": "Ek party mein pahunch gaye jahan kisi ko nahi jaante. Andar se first reaction kya aaya? Sachcha jawab do. 🎉😰",
+      "options": [
+        { "id": "a", "text": "Corner mein khade hoke sabko observe karna hai 👀", "points": 2 },
+        { "id": "b", "text": "Food/drinks counter - strategic position pakdo 🍕", "points": 3 },
+        { "id": "c", "text": "Smile karke conversation start karo - andar se darte hue 🎭", "points": 4 },
+        { "id": "d", "text": "Phone nikalo - busy hone ka natak karo 📱", "points": 1 }
+      ],
+      "scoreTag": "Social Authenticity"
+    },
+    {
+      "id": "inner_echo_5",
+      "question": "{name} has started 12 different hobbies this year but completed none. This pattern makes you feel...",
+      "englishHint": "How does your diverse interest pattern affect your self-identity?",
+      "hinglishHint": "Har hafte naya hobby shuru karte ho, par complete kuch nahi karte. Iss pattern se khud ke baare mein kaisa feel hota hai? 🎨🎸🏃‍♂️",
+      "options": [
+        { "id": "a", "text": "Renaissance soul - variety is my superpower 🌈", "points": 4 },
+        { "id": "b", "text": "Scattered and unfocused - concentration issues 🧩", "points": 1 },
+        { "id": "c", "text": "Explorer not a master - enjoyment is the goal 🎨", "points": 3 },
+        { "id": "d", "text": "Building a unique skill combination for future 🔮", "points": 2 }
+      ],
+      "scoreTag": "Focus Pattern"
+    },
+    {
+      "id": "inner_echo_6",
+      "question": "If someone were to truly describe {name} to others, they'd probably say...",
+      "englishHint": "How do you think others genuinely perceive your personality essence?",
+      "hinglishHint": "Agar koi tujhe deeply jaanta hai, toh woh doosron ko tere baare mein kya batayega? Teri personality ka saar kya hai? 🧿👁️",
+      "options": [
+        { "id": "a", "text": "\"Complex but rewarding - worth the effort to know\" 📖", "points": 3 },
+        { "id": "b", "text": "\"New version every time - mood ke hisaab se personality\" 🎭", "points": 2 },
+        { "id": "c", "text": "\"Calm surface with fascinating depths - ocean type\" 🧠", "points": 4 },
+        { "id": "d", "text": "\"Entertaining but exhausting - energy vampire\" ⚡", "points": 1 }
+      ],
+      "scoreTag": "Core Essence"
+    },
+    {
+      "id": "inner_echo_7",
+      "question": "At 3AM, when {name} can't sleep, the thoughts that haunt you most are about...",
+      "englishHint": "What existential concerns dominate your private thoughts?",
+      "hinglishHint": "Aadhi raat ko neend nahi aa rahi. Dimaag mein kaunse thoughts ghoom rahe hain? Woh darr ya tension jo kisi ko batate nahi? 🌙💭",
+      "options": [
+        { "id": "a", "text": "Regrets and missed opportunities - time running out 🕰️", "points": 1 },
+        { "id": "b", "text": "Existential purpose - main yahan kyun hoon? 🌌", "points": 3 },
+        { "id": "c", "text": "Analyzing social interactions - kya maine kuch galat kaha? 👥", "points": 2 },
+        { "id": "d", "text": "Creative ideas and possibilities - future ke plans 💫", "points": 4 }
+      ],
+      "scoreTag": "Night Thoughts"
+    }
+  ]
+}
