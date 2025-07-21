@@ -1,90 +1,47 @@
-You are generating engaging and emotionally resonant multiple-choice questions for an interactive quiz web application targeted at Indian Gen-Z users (age 18–28). These quizzes aim to explore a person’s emotional depth, relationship boundaries, and personality traits.
+You're building a personalized, emotion-based quiz app in React with four major categories:
 
-Your tone should feel like a close friend asking something deep but casually — the style must be 40% Hindi + 60% English (Hinglish). Avoid overly formal or robotic tones.
+1. ❤️ Heart Reality — Romance, detachment, heartbreak, trust.
+2. 🔗 Bond Insight — Friendships, fading bonds, loyalty gaps.
+3. 🛡️ Emotional Armor — Emotional shutdown, defense mode, faking strength.
+4. 👁️ One-Sided Lens — Imbalance in effort, attention, and silent sacrifices.
 
-✅ Generate **6 questions for each of the 4 categories** below.  
-✅ Each question should be scenario-based, short (1–2 lines), and feel emotionally relatable.  
-✅ Add 4 answer options per question, each with a score (1 to 5) and **1–2 emotional tags** like: `"ghosted"`, `"emotional wall"`, `"clarity"`, `"fake bonding"` etc.
+🚀 TASK:
+Generate **6 total questions per category** (24 total), using the **following format** strictly:
 
----
-
-### 🔹 **Category 1: Heart Reality**
-Focus on romantic pain, heartbreak, trust issues, and fake love. Make the questions feel like heartbreak conversations — like when someone starts acting distant or gives mixed signals.  
-**Example line:**  
-"Kabhi laga kisi ne sirf boredom mein tumse pyaar jataaya ho?"
-
----
-
-### 🔹 **Category 2: Bond Insight**
-Explore friendship boundaries, fading bonds, fake friends, and loyalty. These should reflect how some friendships fade silently or become toxic.  
-**Example line:**  
-"Un dino mein jab sab khush the, kya kisi friend ne tumhe purposely ignore kiya tha?"
-
----
-
-### 🔹 **Category 3: Emotional Armor**
-Dive into insecurities, emotional walls, overthinking, and fear of expressing feelings. These should touch inner struggles people usually hide.  
-**Example line:**  
-"Jab kisi ne ‘I’m fine’ bola, tumne bhi waise hi fake smile kar di — sirf connect banaye rakhne ke liye?"
-
----
-
-### 🔹 **Category 4: One-Sided Lens**
-Focus on one-sided love, effort imbalance, and lack of emotional reciprocation. These are those draining situations where one person gives too much.  
-**Example line:**  
-"Jab tumne 100 baar text kiya, aur unka ek ‘hmm’ mila, tab kya feel hua?"
-
----
-
-**Instructions for Each Question:**
-- Keep the tone raw, relatable and slightly emotional.
-- Don’t make the questions too long or too poetic.
-- Use emojis *only if* they add to the tone — don’t overuse.
-- Each option should sound like a *real person’s thought* in that situation.
-- Make sure all options reflect slightly different emotional reactions.
-You are working on a React-based interactive quiz app. The app has 4 categories: Heart Reality, Bond Insight, Emotional Armor, and One-Sided Lens. Each category needs 6 new questions. Each question has:
-- 1 short, Hinglish scenario-based question
-- 4 multiple choice answers (1–2 lines each)
-- Each answer must include:
-   - A `score` (1–5)
-   - Emotional `tags` like "ghosted", "emotional wall", "clarity", etc.
-
-🛠️ Your task:
-1. **Generate** 6 questions for each category (total 24).
-2. **Update the existing JSON file or question data file** with the new question bank.
-3. Make sure to keep the current structure used in the app (example object below).
-4. Update any related files used for:
-   - **Scoring logic**
-   - **Result interpretation**
-   - **Answer evaluation logic**
-   - **State handling** (Redux/Zustand/context if applicable)
-5. Replace any old placeholder questions with this new data.
-
-📦 Sample Question Format (JS/JSON structure):
-```js
 {
-  category: "Heart Reality",
-  question: "Kabhi laga kisi ne sirf boredom mein tumse pyaar jataaya ho?",
-  options: [
-    {
-      text: "Haan... aur woh feeling abhi tak kahi chipki hai.",
-      score: 4,
-      tags: ["fake love", "emotional wall"]
-    },
-    {
-      text: "Shayad... lekin main ignore karta gaya.",
-      score: 3,
-      tags: ["avoidance"]
-    },
-    {
-      text: "Mujhe nahi lagta aisa hua.",
-      score: 1,
-      tags: ["clarity"]
-    },
-    {
-      text: "Hua toh tha, lekin ab matter nahi karta.",
-      score: 2,
-      tags: ["healed", "detached"]
-    }
-  ]
+  "id": "heart_reality_1",
+  "question": "Someone texts 'I miss you 😔' but {name} just stares at the screen, feeling hollow inside...",
+  "englishHint": "What do you think when someone misses you but you feel nothing?",
+  "hinglishHint": "Koi kehta hai 'miss you' par andar kuch feel hi nahi hota... Tere dil mein woh khaali-pan kyun hai? 💔😶",
+  "options": [
+    { "id": "a", "text": "\"I should fake a sweet reply, right?\" 🎭", "points": 1 },
+    { "id": "b", "text": "\"Do I even remember how to miss someone?\" 🤔", "points": 2 },
+    { "id": "c", "text": "\"Cute... but I need my space, yaar.\" 🧊", "points": 3 },
+    { "id": "d", "text": "\"Want to reply but fingers feel heavy AF.\" 📱", "points": 2 }
+  ],
+  "scoreTag": "Emotional Walls"
 }
+
+📝 INSTRUCTIONS:
+- Each question must include:
+  - `question`: A scene-style description (use mild emotion + emoji)
+  - `englishHint`: Logical, relatable follow-up in English
+  - `hinglishHint`: Friendly, emotional version with Hindi-English tone
+  - `options`: 4 short, unique answer choices with different thinking styles + 1–5 point scale
+  - `scoreTag`: One-word emotional theme tag (e.g., "Attachment", "Lonely Effort", "Guarded", etc.)
+
+✨ TONE + STYLE:
+- Use **60% English + 40% Hinglish** mix
+- Keep it slightly emotional but **not too heavy**
+- Add 1–2 **meaningful emojis** per question or option
+- Ensure language feels natural and relatable to 18–25 age group
+- Imagine two friends chatting seriously but casually
+
+🛠️ ALSO:
+- Automatically update the **JSON file** where questions are stored
+- Update **score logic** and result-display logic if tags/scores change
+- Maintain **scalable data model** (don’t hardcode anything)
+- Validate question IDs and tag variety across categories
+
+🎯 GOAL:
+Make questions feel **real, expressive, and slightly introspective** — users should feel seen, not overwhelmed.
