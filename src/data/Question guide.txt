@@ -1,0 +1,44 @@
+You are creating questions for a React-based personality quiz web app.
+
+🔮 Objective:
+Generate **6 interactive, emotionally engaging multiple-choice questions** under a specific category (like friendship, heartbreak, personality, etc.) for a web-based calculator app. These questions should sound relatable, modern, and have Hinglish/English mix (spoken tone).
+
+🎯 Question Style:
+- Use Gen-Z / 20s vibe, simple Hinglish, playful or emotional tone.
+- Use relatable modern situations (ghosting, ignored chats, fun banter, secret feelings, social awkwardness, etc.)
+- Keep it friendly and reflective.
+
+🧩 Structure per question:
+1. Question text (Hinglish + light English, natural style)
+2. Four multiple-choice answers.
+3. Each answer must have:
+   - `text`: the option's wording
+   - `score`: a numeric value (1 to 4)
+   - `tag`: based on personality or emotional type (example tags: "Emotional Walls", "Lost Bond", "One-Sided", "Friendship Boundary")
+
+💡 Tags:
+Use any 3–4 tags across the 6 questions from this list:
+- Emotional Walls
+- One-sided Connection
+- Lost Bond
+- Friendship Boundary
+- Hopeful Crush
+- Curious Observer
+- Funny Vibes
+
+⚠️ Important:
+- Avoid over-complicated English. Stick to fun and emotional Hinglish.
+- Keep the answer scores and tag logic balanced.
+- Make sure each question is relatable to today's youth.
+- Do NOT add explanations. Only give clean structured data (JSON or array format) for each question.
+
+✅ Output Format Example:
+{
+  "question": "Unka message bas 'seen' mein reh gaya... ab kya feel ho raha hai?",
+  "options": [
+    { "text": "Shayad busy honge... main overthink kar raha hoon", "score": 2, "tag": "Hopeful Crush" },
+    { "text": "Pata hai... mujhe avoid hi kar rahe hain", "score": 4, "tag": "One-sided Connection" },
+    { "text": "Main bhi ab double-tick deke chhod raha hoon", "score": 3, "tag": "Emotional Walls" },
+    { "text": "Toh kya hua... reels dekh lunga 😤", "score": 1, "tag": "Funny Vibes" }
+  ]
+}
