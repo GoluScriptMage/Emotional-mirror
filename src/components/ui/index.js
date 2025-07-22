@@ -1,5 +1,6 @@
 // Export all UI components
-export { default as Button } from './Button_NEW';
-export { default as Card } from './Card_NEW';
-export { default as Modal } from './Modal_NEW';
+export { default as Button } from './Button';
+export { default as Card } from './Card';
+export { default as Modal } from './Modal';
+export { default as ButtonMobileDemo } from './ButtonMobileDemo';
 // Add more UI component exports as they are created

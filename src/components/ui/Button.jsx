@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// eslint-disable-next-line no-unused-vars
 import { motion as m } from 'framer-motion';
 
 /**
@@ -41,15 +42,19 @@ const Button = ({
     lg: iconOnly ? 'p-3 text-lg' : 'px-6 py-3 text-lg',
     xl: iconOnly ? 'p-4 text-xl' : 'px-8 py-4 text-xl',
   };
+  
+  // Check for reduced motion preference
+  const prefersReducedMotion = typeof window !== 'undefined' ? 
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches : false;
 
   // Get the color palette based on calculator theme
   const getThemeColors = (theme) => {
     const colors = {
       default: {
         primary: {
-          bg: 'bg-indigo-600',
-          hover: 'hover:bg-indigo-700',
-          active: 'active:bg-indigo-800',
+          bg: 'bg-gradient-to-r from-indigo-600 via-blue-500 to-indigo-600',
+          hover: 'hover:from-indigo-700 hover:via-blue-600 hover:to-indigo-700',
+          active: 'active:from-indigo-800 active:via-blue-700 active:to-indigo-800',
           text: 'text-white',
           border: 'border-none',
           ring: 'focus:ring-indigo-500',
@@ -99,9 +104,9 @@ const Button = ({
       },
       love: {
         primary: {
-          bg: 'bg-gradient-to-r from-pink-500 to-rose-500',
-          hover: 'hover:from-pink-600 hover:to-rose-600',
-          active: 'active:from-pink-700 active:to-rose-700',
+          bg: 'bg-gradient-to-r from-pink-500 via-rose-400 to-rose-500',
+          hover: 'hover:from-pink-600 hover:via-rose-500 hover:to-rose-600',
+          active: 'active:from-pink-700 active:via-rose-600 active:to-rose-700',
           text: 'text-white',
           border: 'border-none',
           ring: 'focus:ring-pink-500',
@@ -151,9 +156,9 @@ const Button = ({
       },
       friendship: {
         primary: {
-          bg: 'bg-gradient-to-r from-teal-500 to-cyan-500',
-          hover: 'hover:from-teal-600 hover:to-cyan-600',
-          active: 'active:from-teal-700 active:to-cyan-700',
+          bg: 'bg-gradient-to-r from-teal-500 via-cyan-400 to-cyan-500',
+          hover: 'hover:from-teal-600 hover:via-cyan-500 hover:to-cyan-600',
+          active: 'active:from-teal-700 active:via-cyan-600 active:to-cyan-700',
           text: 'text-white',
           border: 'border-none',
           ring: 'focus:ring-teal-500',
@@ -203,9 +208,9 @@ const Button = ({
       },
       career: {
         primary: {
-          bg: 'bg-gradient-to-r from-purple-500 to-violet-500',
-          hover: 'hover:from-purple-600 hover:to-violet-600',
-          active: 'active:from-purple-700 active:to-violet-700',
+          bg: 'bg-gradient-to-r from-purple-500 via-violet-400 to-violet-500',
+          hover: 'hover:from-purple-600 hover:via-violet-500 hover:to-violet-600',
+          active: 'active:from-purple-700 active:via-violet-600 active:to-violet-700',
           text: 'text-white',
           border: 'border-none',
           ring: 'focus:ring-purple-500',
@@ -255,9 +260,9 @@ const Button = ({
       },
       personality: {
         primary: {
-          bg: 'bg-gradient-to-r from-amber-500 to-orange-500',
-          hover: 'hover:from-amber-600 hover:to-orange-600',
-          active: 'active:from-amber-700 active:to-orange-700',
+          bg: 'bg-gradient-to-r from-amber-500 via-orange-400 to-orange-500',
+          hover: 'hover:from-amber-600 hover:via-orange-500 hover:to-orange-600',
+          active: 'active:from-amber-700 active:via-orange-600 active:to-orange-700',
           text: 'text-white',
           border: 'border-none',
           ring: 'focus:ring-amber-500',
@@ -310,10 +315,6 @@ const Button = ({
     return colors[theme] || colors.default;
   };
 
-  // Get current theme colors
-  const themeColors = getThemeColors(calculatorTheme);
-  let variantColors = themeColors[variant] || themeColors.primary;
-
   // Additional variants for danger, success, etc.
   const specialVariants = {
     danger: {
@@ -338,9 +339,15 @@ const Button = ({
     },
   };
 
+  let variantColors;
+
   // Handle special variants
   if (variant === 'danger' || variant === 'success') {
     variantColors = specialVariants[variant];
+  } else {
+    // Get current theme colors
+    const themeColors = getThemeColors(calculatorTheme);
+    variantColors = themeColors[variant] || themeColors.primary;
   }
 
   // State-specific classes
@@ -356,8 +363,10 @@ const Button = ({
   inline-flex items-center justify-center
   font-medium rounded-lg
   transition-all duration-150
-  ${variant === 'outline' ? 'border' : 'border-0'}
   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900
+  active:scale-[0.97] active:translate-y-[1px] active:shadow-none
+  touch-manipulation tap-highlight-transparent
+  ${iconOnly ? 'aspect-square' : ''}
   ${sizeClasses[size]}
   ${variantColors.bg}
   ${variantColors.text}
@@ -365,40 +374,87 @@ const Button = ({
   ${variantColors.ring}
   ${!disabled ? variantColors.hover : ''}
   ${!disabled ? variantColors.active : ''}
-  ${!disabled && variant === 'primary' ? variantColors.shadow : ''}
+  ${!disabled && (variant === 'primary' || variant === 'secondary') ? variantColors.shadow : ''}
   ${
     !disabled && variant === 'primary'
-      ? 'transform-gpu hover:-translate-y-0.5'
-      : ''
+      ? 'transform-gpu hover:-translate-y-1'
+      : variant === 'secondary' 
+        ? 'transform-gpu hover:-translate-y-0.5'
+        : ''
   }
   ${stateClasses}
   ${widthClasses}
   ${className}
 `;
 
-  // Animation variants
+  // Enhanced animation variants with responsive animations that work well on both desktop and mobile
   const buttonAnimation = {
-    hover: !disabled
-      ? {
-          scale: 1.01,
-          y: variant === 'primary' ? -1 : 0,
-          boxShadow: variant === 'primary' ? variantColors.glow : '',
-        }
-      : {},
-    tap: !disabled
-      ? {
-          scale: 0.98,
-        }
-      : {},
     initial: {
       scale: 1,
       y: 0,
+      backgroundPosition: '0% 50%',
+      boxShadow: variant === 'primary' ? variantColors.shadow : '',
     },
+    hover: !disabled && !prefersReducedMotion
+      ? {
+          scale: variant === 'primary' || variant === 'secondary' ? 1.05 : 1.02,
+          y: variant === 'primary' ? -3 : variant === 'secondary' ? -2 : 0,
+          boxShadow: variant === 'primary' ? variantColors.glow : '',
+          backgroundPosition: '100% 50%',
+          transition: {
+            y: { type: 'spring', stiffness: 400, damping: 20 },
+            scale: { type: 'spring', stiffness: 400, damping: 20 },
+            backgroundPosition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+          }
+        }
+      : {},
+    tap: !disabled && !prefersReducedMotion
+      ? {
+          scale: iconOnly ? 0.9 : 0.97, // More pronounced scale effect for icon-only buttons
+          y: 1, // Slight downward movement for tactile feedback
+          backgroundPosition: '50% 50%',
+          boxShadow: 'none', // Remove shadow on tap for better pressed effect
+          transition: {
+            type: 'spring',
+            stiffness: 300, // Higher stiffness for quicker response
+            damping: 10, // Lower damping for more responsive bounce
+            velocity: 10, // Higher velocity for more responsive feel on mobile
+            restDelta: 0.001, // Small rest delta for smoother animation completion
+            restSpeed: 0.001, // Small rest speed for smoother animation completion
+            duration: 0.15 // Shorter duration for mobile taps
+          }
+        }
+      : {},
+    // Pulse animation for primary buttons to draw attention
+    animate: variant === 'primary' && !disabled && !prefersReducedMotion
+      ? {
+          scale: [1, 1.02, 1],
+          boxShadow: [
+            variantColors.shadow,
+            variantColors.glow, 
+            variantColors.shadow
+          ],
+          transition: {
+            repeat: Infinity,
+            repeatType: "reverse",
+            duration: 2,
+            ease: "easeInOut",
+            repeatDelay: 4
+          }
+        }
+      : {}
   };
 
-  // Handle click
+
+  // Handle click with haptic feedback
   const handleClick = (e) => {
     if (!disabled && !loading && onClick) {
+      // Add haptic feedback for mobile devices if supported
+      if (navigator.vibrate && window.matchMedia('(max-width: 768px)').matches) {
+        // Use a short, subtle vibration for button presses (15ms)
+        navigator.vibrate(15);
+      }
+      
       onClick(e);
     }
   };
@@ -426,25 +482,115 @@ const Button = ({
     </svg>
   );
 
+  // Get pulse color based on calculator theme
+  const getPulseColor = (theme) => {
+    switch(theme) {
+      case 'love': return '236, 72, 153'; // Pink
+      case 'friendship': return '20, 184, 166'; // Teal
+      case 'career': return '147, 51, 234'; // Purple
+      case 'personality': return '245, 158, 11'; // Amber
+      default: return '79, 70, 229'; // Indigo
+    }
+  };
+
+  // Create advanced animation effects for buttons
+
+  // Create advanced animation effects for buttons
+  const buttonEffects = !disabled ? {
+    position: 'relative',
+    isolation: 'isolate',
+    // Reflection sweep effect for all variant types
+    '&::before': variant === 'primary' || variant === 'secondary' ? {
+      content: '""',
+      position: 'absolute',
+      inset: 0,
+      background: `linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)`,
+      transform: 'translateX(-100%) skewX(-15deg)',
+      zIndex: 1,
+      transition: 'transform 0.6s ease',
+    } : {},
+    '&:hover::before': variant === 'primary' || variant === 'secondary' ? {
+      transform: 'translateX(100%) skewX(-15deg)',
+    } : {},
+    // Animated border effect for primary buttons - Enhanced for better visibility
+    '&::after': variant === 'primary' ? {
+      content: '""',
+      position: 'absolute',
+      inset: '-4px', // Slightly larger distance for more visibility
+      background: `linear-gradient(45deg, 
+        ${calculatorTheme === 'love' ? 'rgba(244, 114, 182, 0.7)' : 
+          calculatorTheme === 'friendship' ? 'rgba(20, 184, 166, 0.7)' :
+          calculatorTheme === 'career' ? 'rgba(139, 92, 246, 0.7)' :
+          calculatorTheme === 'personality' ? 'rgba(251, 191, 36, 0.7)' :
+          'rgba(99, 102, 241, 0.7)'},
+        transparent,
+        ${calculatorTheme === 'love' ? 'rgba(236, 72, 153, 0.7)' : 
+          calculatorTheme === 'friendship' ? 'rgba(6, 148, 162, 0.7)' :
+          calculatorTheme === 'career' ? 'rgba(124, 58, 237, 0.7)' :
+          calculatorTheme === 'personality' ? 'rgba(245, 158, 11, 0.7)' :
+          'rgba(79, 70, 229, 0.7)'}
+      )`,
+      backgroundSize: '300% 300%',
+      filter: 'blur(8px) opacity(0)',
+      borderRadius: 'inherit',
+      zIndex: -1,
+      transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+      animation: 'none',
+    } : {},
+    '&:hover::after': variant === 'primary' ? {
+      filter: 'blur(8px) opacity(0.9)',
+      transform: 'scale(1.07)',
+      animation: 'borderGradientSpin 4s linear infinite',
+    } : {},
+    '@keyframes borderGradientSpin': variant === 'primary' ? {
+      '0%': { backgroundPosition: '0% 50%' },
+      '50%': { backgroundPosition: '100% 50%' },
+      '100%': { backgroundPosition: '0% 50%' }
+    } : {},
+    // Special pulse animation for primary buttons
+    animation: variant === 'primary' ? 'pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite' : 'none',
+    '@keyframes pulse': variant === 'primary' ? {
+      '0%, 100%': {
+        boxShadow: `0 0 0 0 rgba(${getPulseColor(calculatorTheme)}, 0.4)`
+      },
+      '50%': {
+        boxShadow: `0 0 0 8px rgba(${getPulseColor(calculatorTheme)}, 0)`
+      }
+    } : {},
+  } : {};
+
   return (
     <m.button
       className={buttonClasses}
       style={{
         border: 'none',
         outline: 'none',
-        boxShadow: 'none', // Add this to ensure no shadow is acting like a border
+        boxShadow: 'none',
+        backgroundSize: '200% auto',
+        transition: 'background-position 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+        ...buttonEffects
       }}
       onClick={handleClick}
       disabled={disabled || loading}
       initial="initial"
-      whileHover="hover"
-      whileTap="tap"
+      animate={variant === 'primary' && !prefersReducedMotion ? "animate" : "initial"}
+      whileHover={prefersReducedMotion ? "initial" : "hover"}
+      whileTap={prefersReducedMotion ? "initial" : "tap"}
+      whileFocus="hover" // Apply hover styles on focus for better keyboard accessibility
       variants={buttonAnimation}
       transition={{
         type: 'spring',
-        stiffness: 500,
-        damping: 17,
-        duration: 0.15,
+        stiffness: variant === 'primary' ? 700 : 600, // Increased stiffness for more responsive feel
+        damping: variant === 'primary' ? 15 : 20,
+        velocity: 10, // Added velocity for better mobile responsiveness
+        duration: 0.2,
+      }}
+      css={{
+        WebkitTapHighlightColor: 'transparent',
+        WebkitTouchCallout: 'none',
+        WebkitUserSelect: 'none',
+        userSelect: 'none',
+        touchAction: 'manipulation',
       }}
       {...props}
     >
@@ -456,11 +602,35 @@ const Button = ({
       ) : (
         <>
           {leftIcon && (
-            <span className={`${children ? 'mr-2' : ''}`}>{leftIcon}</span>
+            <m.span 
+              className={`${children ? 'mr-2' : ''} inline-flex items-center`}
+              animate={variant === 'primary' && !prefersReducedMotion ? { x: [0, -2, 0] } : undefined}
+              transition={{
+                repeat: variant === 'primary' && !prefersReducedMotion ? Infinity : 0,
+                repeatType: "reverse",
+                duration: 1.5,
+                repeatDelay: 4,
+                ease: "easeInOut",
+              }}
+            >
+              {leftIcon}
+            </m.span>
           )}
           {children && <span>{children}</span>}
           {rightIcon && (
-            <span className={`${children ? 'ml-2' : ''}`}>{rightIcon}</span>
+            <m.span 
+              className={`${children ? 'ml-2' : ''} inline-flex items-center`}
+              animate={variant === 'primary' && !prefersReducedMotion ? { x: [0, 2, 0] } : undefined}
+              transition={{
+                repeat: variant === 'primary' && !prefersReducedMotion ? Infinity : 0,
+                repeatType: "reverse",
+                duration: 1.5,
+                repeatDelay: 4,
+                ease: "easeInOut",
+              }}
+            >
+              {rightIcon}
+            </m.span>
           )}
         </>
       )}

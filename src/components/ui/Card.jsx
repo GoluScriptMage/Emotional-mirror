@@ -46,7 +46,7 @@ const Card = ({
         bg: 'bg-white dark:bg-gray-800',
         border: 'border-gray-200 dark:border-gray-700',
         ring: 'ring-indigo-500/50',
-        text: 'text-gray-800 dark:text-gray-100',
+        text: 'text-gray-900 dark:text-gray-100', // Updated text color for light theme
         accent: 'from-indigo-500 to-purple-500',
         shadow: 'shadow-indigo-500/10',
         decoration: 'bg-indigo-500'
@@ -55,7 +55,7 @@ const Card = ({
         bg: 'bg-white dark:bg-gray-800',
         border: 'border-pink-200 dark:border-pink-800/50',
         ring: 'ring-pink-500/50',
-        text: 'text-gray-800 dark:text-gray-100',
+        text: 'text-gray-900 dark:text-gray-100', // Updated text color for light theme
         accent: 'from-pink-500 to-rose-500',
         shadow: 'shadow-pink-500/10',
         decoration: 'bg-pink-500'
@@ -64,7 +64,7 @@ const Card = ({
         bg: 'bg-white dark:bg-gray-800',
         border: 'border-teal-200 dark:border-teal-800/50',
         ring: 'ring-teal-500/50',
-        text: 'text-gray-800 dark:text-gray-100',
+        text: 'text-gray-900 dark:text-gray-100', // Updated text color for light theme
         accent: 'from-teal-500 to-cyan-500',
         shadow: 'shadow-teal-500/10',
         decoration: 'bg-teal-500'
@@ -73,7 +73,7 @@ const Card = ({
         bg: 'bg-white dark:bg-gray-800',
         border: 'border-purple-200 dark:border-purple-800/50',
         ring: 'ring-purple-500/50',
-        text: 'text-gray-800 dark:text-gray-100',
+        text: 'text-gray-900 dark:text-gray-100', // Updated text color for light theme
         accent: 'from-purple-500 to-violet-500',
         shadow: 'shadow-purple-500/10',
         decoration: 'bg-purple-500'
@@ -82,7 +82,7 @@ const Card = ({
         bg: 'bg-white dark:bg-gray-800',
         border: 'border-amber-200 dark:border-amber-800/50',
         ring: 'ring-amber-500/50',
-        text: 'text-gray-800 dark:text-gray-100',
+        text: 'text-gray-900 dark:text-gray-100', // Updated text color for light theme
         accent: 'from-amber-500 to-orange-500',
         shadow: 'shadow-amber-500/10',
         decoration: 'bg-amber-500'
@@ -117,13 +117,13 @@ const Card = ({
         other: ''
       },
       outlined: {
-        bg: 'bg-transparent',
+        bg: 'bg-gray-800 dark:bg-gray-900',
         border: `border-2 ${colors.border}`,
         shadow: '',
         hoverEffects: hoverable 
-          ? `hover:bg-gray-50/50 dark:hover:bg-gray-800/50 transition-colors duration-300` 
+          ? `hover:bg-gray-700 dark:hover:bg-gray-800 transition-colors duration-300` 
           : '',
-        other: ''
+        other: 'text-white'
       },
       glass: {
         bg: 'bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg backdrop-saturate-150',
@@ -157,17 +157,20 @@ const Card = ({
     ${widthClasses}
     ${onClick ? 'cursor-pointer' : ''}
     ${className}
+    no-scrollbar
   `;
 
-  // Animation variants
+  // Enhanced animation variants
   const cardAnimation = {
     hover: hoverable ? { 
       y: variant === 'elevated' ? -4 : 0,
       scale: 1.01,
+      boxShadow: variant === 'glass' || variant === 'elevated' ? `0 20px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px ${themeColors.shadow.replace('shadow-', '')}` : '',
       transition: { 
         type: 'spring', 
         stiffness: 300, 
-        damping: 15 
+        damping: 15,
+        boxShadow: { duration: 0.3, ease: 'easeOut' }
       }
     } : {},
     tap: onClick ? { 
@@ -181,7 +184,19 @@ const Card = ({
     initial: {
       scale: 1,
       y: 0
-    }
+    },
+    // Subtle floating animation for glass and elevated variants
+    animate: (variant === 'glass' || variant === 'elevated') && hoverable ? {
+      y: [0, -3, 0],
+      transition: {
+        y: {
+          repeat: Infinity,
+          repeatType: "reverse",
+          duration: 4,
+          ease: "easeInOut"
+        }
+      }
+    } : {}
   };
 
   // Handle click
@@ -191,7 +206,7 @@ const Card = ({
     }
   };
 
-  // Custom decorative elements
+  // Enhanced decorative elements
   const renderDecorationElement = () => {
     if (decorationElement) {
       return decorationElement;
@@ -199,9 +214,38 @@ const Card = ({
 
     if (variant === 'elevated' || variant === 'glass') {
       return (
-        <div className="absolute right-0 top-0">
-          <div className={`w-20 h-20 transform rotate-45 translate-x-8 -translate-y-8 bg-gradient-to-r ${themeColors.accent} opacity-20`}></div>
-        </div>
+        <motion.div 
+          className="absolute right-0 top-0 overflow-hidden" 
+          initial={{ opacity: 0.2 }} 
+          animate={hoverable ? { opacity: [0.2, 0.3, 0.2] } : { opacity: 0.2 }}
+          transition={{
+            opacity: {
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 3,
+              ease: "easeInOut"
+            }
+          }}
+        >
+          <motion.div 
+            className={`w-24 h-24 transform rotate-45 translate-x-8 -translate-y-8 bg-gradient-to-r ${themeColors.accent}`}
+            animate={hoverable ? { rotate: [45, 50, 45], scale: [1, 1.05, 1] } : {}}
+            transition={{
+              rotate: {
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 4,
+                ease: "easeInOut"
+              },
+              scale: {
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 3,
+                ease: "easeInOut"
+              }
+            }}
+          />
+        </motion.div>
       );
     }
 
@@ -213,13 +257,14 @@ const Card = ({
       className={cardClasses}
       onClick={handleClick}
       initial="initial"
+      animate={(variant === 'glass' || variant === 'elevated') && hoverable ? "animate" : "initial"}
       whileHover="hover"
       whileTap="tap"
       variants={cardAnimation}
       {...props}
     >
       {renderDecorationElement()}
-      <div className="relative z-10">
+      <div className={`relative z-10 ${variant === 'outlined' ? 'text-white' : themeColors.text}`}>
         {children}
       </div>
     </motion.div>
